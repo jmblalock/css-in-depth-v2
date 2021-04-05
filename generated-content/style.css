@@ -1,8 +1,8 @@
-p:before {
+p.example:before {
   content: "before content - ";
   font-weight: bold;
 }
-p:after {
+p.example:after {
   content: " - after content";
   font-weight: bold;
 }
@@ -26,4 +26,38 @@ p:after {
   border-color: red transparent transparent transparent;
   bottom: -39px;
   left: 20px;
+}
+p [data-tooltip="true"] {
+  border-bottom: 1px solid;
+  text-decoration: none;
+  line-height: 1;
+  display: inline;
+  z-index: 0;
+}
+p [data-tooltip="true"]:hover {
+  position: relative;
+}
+p [data-tooltip="true"]:hover:before {
+  content: attr(title);
+  position: absolute;
+  top: 45px;
+  left: 0;
+  background-color: #c7573a;
+  color: white;
+  max-width: 10em;
+  min-width: 5em;
+  font-style: normal;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 100;
+}
+p [data-tooltip="true"]:hover:after {
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  border: 15px solid;
+  position: absolute;
+  left: 20px;
+  border-color: transparent transparent #c7573a;
 }
