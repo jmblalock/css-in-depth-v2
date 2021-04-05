@@ -6,3 +6,24 @@ p:after {
   content: " - after content";
   font-weight: bold;
 }
+.quote {
+  border-radius: 10px;
+  position: relative;
+  padding: 20px;
+  background-color: red;
+  color: white;
+  float: left;
+}
+.quote:before {
+  content: "";
+}
+.quote:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 20px solid blue;
+  border-color: red transparent transparent transparent;
+  bottom: -39px;
+  left: 20px;
+}
