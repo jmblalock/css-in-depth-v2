@@ -9,31 +9,25 @@
     <style>
       body {
         display: grid;
-        grid-template-columns: 8em repeat(2, 1fr);
-        grid-template-rows: 6em 2em auto auto 2em;
-        grid-gap: 20px;
-        width: 760px;
-        margin: auto;
+        grid-template-areas:
+          "header header header"
+          "nav article aside"
+          "footer footer footer";
       }
       header {
-        grid-row: 1/2;
-        grid-column: 1/4;
+        grid-area: header;
       }
       nav {
-        grid-row: 2/3;
-        grid-column: 1/4;
+        grid-area: nav;
+      }
+      article {
+        grid-area: article;
       }
       aside {
-        grid-row: 3/5;
+        grid-area: aside;
       }
-      article:nth-of-type(1) {
-        grid-row: 3/4;
-        grid-column: 2/4;
-      }
-      footer,
-      header,
-      nav {
-        grid-column: 1/4;
+      footer {
+        grid-area: footer;
       }
     </style>
   </head>
@@ -41,8 +35,6 @@
     <header>Header</header>
     <nav>Nav</nav>
     <article>Article 1</article>
-    <article>Article 2</article>
-    <article>Article 3</article>
     <aside>Aside</aside>
     <footer>Footer</footer>
   </body>
