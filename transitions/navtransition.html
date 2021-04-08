@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real World Transitions</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      nav {
+        display: block;
+        float: left;
+        width: 100%;
+        margin: 20px -40px;
+        padding: 0 40px;
+        background-color: #58ade3;
+        border: 1px solid #fff;
+      }
+      nav ul li {
+        list-style-type: none;
+      }
+      nav ul li {
+        display: inline-block;
+        position: relative;
+      }
+      nav ul ul {
+        transform: scale(1, 0);
+        transform-origin: top center;
+        transition: 0.2s linear 50ms;
+        position: absolute;
+        top: 100%;
+      }
+      nav li:hover ul {
+        transform: scale(1, 1);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          About
+          <ul>
+            <li>Me</li>
+            <li>You</li>
+            <li>Them</li>
+            <li>Nobody</li>
+          </ul>
+        </li>
+        <li>
+          Posts
+          <ul>
+            <li>Door Post</li>
+            <li>Wall hanging</li>
+            <li>Stair Banister</li>
+            <li>Washington</li>
+          </ul>
+        </li>
+        <li>
+          Topics
+          <ul>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>HTML5</li>
+            <li>SEO</li>
+          </ul>
+        </li>
+        <li>
+          Events
+          <ul>
+            <li>Party</li>
+            <li>Dinner</li>
+            <li>Hike</li>
+            <li>Foo Camp</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
